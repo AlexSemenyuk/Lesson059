@@ -1,0 +1,137 @@
+/* Common */
+:root {
+    /* text color */
+    --color-text-primary: rgba(0, 0, 0, 1);
+    --color-text-secondary: rgba(255, 255, 255, 1);
+
+    /* background */
+    --color-background-body: rgb(210, 210, 210, 1);
+    --color-background-thead: rgb(173, 216, 232, 1);
+    --color-background-tbody-odd: rgb(245, 245, 245, 1);
+    --color-background-tbody-honest: rgb(230, 230, 230, 1);
+    --color-background-task: rgb(53, 80, 121);
+
+    /* text */
+    --text-primary: "Arial", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background-body);
+    font-family: var(--text-primary);
+    font-size: 10px;
+    color: var(--color-text-primary);
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+/*div {*/
+/*  margin: 10px;*/
+/*  width: 300px;*/
+/*  height: 200px;*/
+/*  overflow: scroll;*/
+/*}*/
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--color-text-primary);
+    margin: 10px;
+}
+
+thead th {
+    width: 80px;
+    /* padding: 10px 0 10px 0; */
+    border: 1px solid var(--color-text-primary);
+}
+
+tbody td {
+    border: 1px solid var(--color-text-primary);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--color-background-tbody-odd);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-background-tbody-honest);
+}
+
+thead tr,
+tbody tr {
+    height: 30px;
+}
+
+th:nth-child(n + 2) {
+    background-color: var(--color-background-thead);
+    top: 0px;
+    position: sticky;
+}
+
+td:first-child {
+    background-color: var(--color-background-thead);
+    left: 0px;
+    position: sticky;
+}
+
+th:first-child {
+    background-color: var(--color-background-thead);
+    left: 0px;
+    top: 0;
+    z-index: 1;
+    position: sticky;
+}
+
+.task {
+    text-align: left;
+    width: 100%;
+    background-color: var(--color-background-task);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    margin: 10px;
+}
+
+.task > h2 {
+    padding: 10px;
+}
+
+.task > p {
+    padding: 0 10px 10px 10px;
+}
+
+.task > h2,
+.data > h2 {
+    font-size: 16px;
+}
+
+.data {
+    text-align: left;
+    width: 100%;
+    background-color: var(--color-background-task);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    margin: 10px;
+}
+
+.data > h2 {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    padding: 10px;
+}
+
+.data > p:first-of-type {
+    padding: 0 10px 0 10px;
+}
+
+.data > p:last-of-type {
+    padding: 0 10px 10px 10px;
+}
+
+
